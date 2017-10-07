@@ -21,3 +21,9 @@ You can use this link to connect the bot with your server, but before simply rep
 
 ## Python and virtual environments ##
 For personal development as a Phyton dev, use virtual environments is recommended. It isn't as much as a hassle as it sounds thou, but rather gives you more flexibility while working with python. A short, simple but useful introduction from the official python docs/tutorial: [Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html). Because it's wasn't mentioned, to exit from the venv on the terminal, simply type `deactivate`, a command added by the <venv>/bin/activate script.
+
+## Venv in PyCharm ##
+When creating new projects, PyCharm offers you dtoo choose or create a new venv for your project.  
+When working with an existing project, choose 'File > Default Settings(/Preferences)'.  
+From there navigate to Project Interpreter and choose the python interpreter of your choice.
+Alternativly, you can create a new venv by clicking on the gearwheel and choosing 'Add Local'
