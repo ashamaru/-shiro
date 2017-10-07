@@ -26,4 +26,4 @@ For personal development as a Phyton dev, use virtual environments is recommende
 When creating new projects, PyCharm offers you dtoo choose or create a new venv for your project.  
 When working with an existing project, choose 'File > Default Settings(/Preferences)'.  
 From there navigate to Project Interpreter and choose the python interpreter of your choice.
-Alternativly, you can create a new venv by clicking on the gearwheel and choosing 'Add Local'
+Alternativly, you can create a new venv by clicking on the gearwheel and choosing 'Create Virt. Env.'
