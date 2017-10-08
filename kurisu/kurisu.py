@@ -10,11 +10,11 @@ help_text = 'To use ' + bot_name + ', type - followed by a command.\n'  \
             '\t- test: no clue\n'                                       \
             '\t- sleep: sleeps for 5 seconds\n'                         \
             '\t- help: prints out this help\n'                          \
-            '\nor type @kurisu followed by a message.\n'                  \
-            'Available messages are:\n'                                \
-            '\t- smile\n'                                                  \
+            '\nor type @kurisu followed by a message.\n'                \
+            'Available messages are:\n'                                 \
+            '\t- smile\n'                                               \
 
-dir_root = '/path/to/root'
+dir_root = '/Users/tak7tsuki/PycharmProjects/shiro'
 path_to_db = dir_root + '/kurisu/db.xml'
 
 
@@ -80,13 +80,7 @@ async def on_message(message):
     elif message.content.startswith('-help'):
         await client.send_message(message.channel, help_text)
 
-    # reacts to kuriso in msg
-    elif 'kurisu' in message.content:
-        mood = eval_mood(message.content)
-        reply = db_wrapper.get_random_reply(mood)
-        await client.send_message(message.channel, reply)
-
-    elif message.content.startswith('@Kurisu') or message.content.startswith('@kurisu'):
+    elif message.content.lower().startswith('@kurisu'):
         index = message.content.find('@')
         command = message.content[index + 7:].strip()
 
@@ -95,5 +89,12 @@ async def on_message(message):
         else:
             await client.send_message(message.channel, '\*sight\* what?')
 
+    # reacts to kuriso in msg
+    elif 'kurisu' in message.content:
+        mood = eval_mood(message.content)
+        reply = db_wrapper.get_random_reply(mood)
+        await client.send_message(message.channel, reply)
+
+
 # replace with the token for your discord app/ dc bot
-client.run('token')
+client.run('MzY2NTkyNTAyMTYzMzA4NTQ2.DLvz0g.o7z41XU91zfO5oD7JGUvnhnRjFI')
