@@ -1,0 +1,14 @@
+<kurisu_db>
+    <angry count="5">
+        <reply>Angry reply #0</reply>
+        <reply>Angry reply #1</reply>
+        <reply>Angry reply #2</reply>
+        <reply>Angry reply #3</reply>
+        <reply>Angry reply #4</reply>
+    </angry>
+    <bored count="3">
+        <reply>Bored reply #0</reply>
+        <reply>Bored reply #1</reply>
+        <reply>Bored reply #2</reply>
+    </bored>
+</kurisu_db>
