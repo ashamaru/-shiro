@@ -79,6 +79,7 @@ async def on_message(message):
                                                    'because you bore ma that much! Baka...')
     elif message.content.startswith('-help'):
         await client.send_message(message.channel, help_text)
+
     # reacts to kuriso in msg
     elif 'kurisu' in message.content:
         mood = eval_mood(message.content)
