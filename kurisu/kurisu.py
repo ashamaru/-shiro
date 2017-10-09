@@ -1,5 +1,7 @@
 import discord
 import asyncio
+import sys
+import os
 from xml.etree import ElementTree
 from random import randint
 
@@ -14,11 +16,20 @@ help_text = 'To use ' + bot_name + ', type - followed by a command.\n'  \
             'Available messages are:\n'                                 \
             '\t- smile\n'                                               \
 
-dir_root = '/Users/tak7tsuki/PycharmProjects/shiro'
+dir_root = '/home/tenma/PycharmProjects/shiro'
 path_to_db = dir_root + '/kurisu/db.xml'
 
 
+# Init the python path - will be changed later
+
+PACKAGE_PARENT = '..'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
+
+
 # db.xml database wrapper
+
+# from kurisu.kurisudb import DBHandel
 
 class KurisuDatabaseWrapper:
     path_to_xml_db = None
@@ -76,7 +87,7 @@ async def on_message(message):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Huh?! I... I did not sleep because you wanted me to do so! '
                                                    'In fact I was just tired. Yeah tired, '
-                                                   'because you bore ma that much! Baka...')
+                                                   'because you bore ma that much! Baka...')    # <- weird...
     elif message.content.startswith('-help'):
         await client.send_message(message.channel, help_text)
 
@@ -93,7 +104,10 @@ async def on_message(message):
     elif 'kurisu' in message.content:
         mood = eval_mood(message.content)
         reply = db_wrapper.get_random_reply(mood)
-        await client.send_message(message.channel, reply)
+        if reply is not None:
+            await client.send_message(message.channel, reply)
+        else:
+            await client.send_message(message.channel, 'bugs...')
 
 
 # replace with the token for your discord app/ dc bot

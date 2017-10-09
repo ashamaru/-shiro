@@ -1,14 +1,28 @@
 <kurisu_db>
-    <angry count="5">
-        <reply>Angry reply #0</reply>
-        <reply>Angry reply #1</reply>
-        <reply>Angry reply #2</reply>
-        <reply>Angry reply #3</reply>
-        <reply>Angry reply #4</reply>
-    </angry>
-    <bored count="3">
-        <reply>Bored reply #0</reply>
-        <reply>Bored reply #1</reply>
-        <reply>Bored reply #2</reply>
-    </bored>
+    <meta>
+        <!-- Categories are yet to be semantically defined -->
+        <categories>
+            <category>categ0</category>
+            <category>categ1</category>
+        </categories>
+        <!-- Domains are helpful to insert and delete common content in the database -->
+        <domains>
+            <domain>dom0</domain>
+            <domain>dom1</domain>
+        </domains>
+    </meta>
+        <content>
+            <angry count="5">
+                <reply domain="dom0">Angry reply #0</reply>
+                <reply domain="dom0">Angry reply #1</reply>
+                <reply domain="dom1">Angry reply #2 dom1</reply>
+                <reply domain="dom0">Angry reply #3</reply>
+                <reply domain="dom1">Angry reply #4 dom1</reply>
+            </angry>
+            <bored count="3">
+                <reply domain="dom0">Bored reply #0</reply>
+                <reply domain="dom1">Bored reply #1 dom1</reply>
+                <reply domain="dom0">Bored reply #2</reply>
+            </bored>
+    </content>
 </kurisu_db>
