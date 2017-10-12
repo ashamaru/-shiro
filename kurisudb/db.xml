@@ -1,0 +1,21 @@
+<kurisu_db>
+    <meta>
+        <domains>
+            <domain>std</domain>
+            <domain>tfoz</domain>
+        </domains>
+    </meta>
+        <content>
+            <angry count="5">
+                <reply domain="tfoz">Something about ur a dawg...</reply>
+                <reply domain="tfoz">\*unleashes the whip\*</reply>
+                <reply domain="std">(︶︿︶)╭∩╮</reply>
+                <reply domain="tfoz">Ur dirt under my fingernail.</reply>
+                <reply domain="tfoz">(∩｀-´)⊃━☆ﾟ.*･｡ﾟ</reply>
+            </angry>
+            <bored count="2">
+                <reply domain="std">¬_¬</reply>
+                <reply domain="std">(◔_◔)</reply>
+            </bored>
+    </content>
+</kurisu_db>
